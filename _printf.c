@@ -13,6 +13,8 @@ int _printf(const char *format, ...)
 
 	int i, char_count, char_no;
 
+	int (*func_pointer)(va_list);
+
 	i = char_count = char_no = 0;
 
 	/* Check for empty format */
@@ -24,12 +26,27 @@ int _printf(const char *format, ...)
 	/* Check string literal is not at the end i.e '\0' */
 	while (format[i] != '\0')
 	{
-		char_no = _putchar(format[i]);
-		char_count += char_no;
-		i++;
+		if (format[i] == '%')
+		{
+			if (format[i + 1] == '\0')
+				break;
+
+			func_pointer = is_special_character(&format[i + 1]);
+
+			if (func_pointer != NULL)
+			{
+				char_no = func_pointer(args);
+				char_count += char_no;
+				i += 2;
+			}
+		}
+		else
+		{
+			char_no = _putchar(format[i]);
+			char_count += char_no;
+			i++;
+		}
 	}
-
 	va_end(args);
-
 	return (char_count);
 }
