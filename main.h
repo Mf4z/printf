@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <unistd.h>                                                                                                                         
 
 int _printf(const char *format, ...);
 int _putchar(char c);
@@ -26,4 +27,5 @@ typedef struct func
 int char_fun(va_list);
 int str_fun(va_list);
 int pcent_fun(va_list);
+
 #endif

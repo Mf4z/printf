@@ -40,12 +40,10 @@ int _printf(const char *format, ...)
 				i += 2;
 			}
 		}
-		else
-		{
-			char_no = _putchar(format[i]);
-			char_count += char_no;
-			i++;
-		}
+
+		char_no = _putchar(format[i]);
+		char_count += char_no;
+		i++;
 	}
 	va_end(args);
 	return (char_count);
