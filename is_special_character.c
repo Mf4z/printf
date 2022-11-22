@@ -11,7 +11,7 @@
 
 int (*is_special_character(const char *format))(va_list)
 {
-	int i;
+	int i = 0;
 
 	/*This an array of struct initialization */
 	func_t sc_array[4] = {
@@ -26,8 +26,10 @@ int (*is_special_character(const char *format))(va_list)
 	 */
 	while (sc_array[i].t != NULL)
 	{
-		if (*(sc_array[i] == *format))
+		if (*(sc_array[i].t) == *format)
 			return (sc_array[i].f);
 		i++;
 	}
+
+	return (NULL);
 }
