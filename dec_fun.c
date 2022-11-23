@@ -35,7 +35,7 @@ int dec_fun(va_list args)
 	{
 		/* convert int to character */
 		c[0] = ('0' + num_arr[i]);
-		count += _putchar(*c);
+		count += write(1, c, 1);
 		i--;
 	}
 	return (count);
