@@ -11,9 +11,10 @@ int dec_fun(va_list args)
 {
 	int i, count, number, num_arr[10];
 
+	char c[1];
+	
 	i = count = 0;
 
-	char c[1];
 
 	/* Get decimal number from variadic args */
 	number = va_arg(args, int);
