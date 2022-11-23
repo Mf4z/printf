@@ -27,5 +27,7 @@ typedef struct func
 int char_fun(va_list);
 int str_fun(va_list);
 int pcent_fun(va_list);
+int dec_fun(va_list);
+int int_fun(va_list);
 
 #endif

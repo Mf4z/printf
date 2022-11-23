@@ -18,6 +18,8 @@ int (*is_special_character(const char *format))(va_list)
 		{"c", char_fun},
 		{"s", str_fun},
 		{"%", pcent_fun},
+		{"d", dec_fun},
+		{"i", int_fun},
 		{NULL, NULL}};
 
 	/*
