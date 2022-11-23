@@ -14,7 +14,7 @@ int (*is_special_character(const char *format))(va_list)
 	int i = 0;
 
 	/*This an array of struct initialization */
-	func_t sc_array[4] = {
+	func_t sc_array[6] = {
 		{"c", char_fun},
 		{"s", str_fun},
 		{"%", pcent_fun},
