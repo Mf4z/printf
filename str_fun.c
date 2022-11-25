@@ -14,11 +14,9 @@ int str_fun(va_list args)
 	char *str;
 
 	str = va_arg(args, char *);
-	if (str != NULL)
-	{
-		for (i = 0; str[i] != '\0'; i++)
-			count = _putchar(str[i]);
-		return (count);
-	}
-	return (-1);
+	if (str == NULL)
+		return (-1);
+	for (i = 0; str[i] != '\0'; i++)
+		count = _putchar(str[i]);
+	return (count);
 }

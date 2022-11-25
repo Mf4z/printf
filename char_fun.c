@@ -12,8 +12,10 @@ int char_fun(va_list args)
 	char c = (char)va_arg(args, int);
 	int count = 0;
 
-	if (!c)
-		return (0);
-	count = _putchar(c);
-	return (count);
+	if (c)
+	{
+		count = _putchar(c);
+		return (count);
+	}
+	return (0);
 }

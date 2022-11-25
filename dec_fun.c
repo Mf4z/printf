@@ -13,7 +13,8 @@ int dec_fun(va_list args)
 
 	char c[1];
 	
-	i = count = 0;
+	i = 0;
+	count = 0;
 
 
 	/* Get decimal number from variadic args */
@@ -24,10 +25,10 @@ int dec_fun(va_list args)
 	{
 		num_arr[i] = (number % 10);
 		number = number / 10;
-		if (number != 0)
-			i++;
-		else
+		if (number == 0)
 			break;
+		else
+			i++;
 	}
 
 	/* Print content of array to standard output */

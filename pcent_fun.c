@@ -12,6 +12,5 @@ int pcent_fun(va_list args)
 	(void)args;
 
 	_putchar('%');
-
 	return (1);
 }
